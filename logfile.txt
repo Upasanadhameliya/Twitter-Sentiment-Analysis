@@ -1,0 +1,64 @@
+-Import train data
+https://raw.githubusercontent.com/dD2405/Twitter_Sentiment_Analysis/master/train.csv
+-View the train data in the form of a table, check for the values and the headings
+-Import test data
+https://raw.githubusercontent.com/dD2405/Twitter_Sentiment_Analysis/master/test.csv
+-View test data in the form of a table, check for the values and the headings
+
+
+
+PREPROCESSING:
+
+-Combine the train and the test data rows for the preprocessing
+-Clean the twitter handles from the text and put it in a separate column
+-Clean every punctuations except for text and hashes
+-Remove Short words (length <= 3)
+-Create tokens i.e. create another pandas object each having a list of above words from each line
+-Stemming : Removing ing,ly,ed from the words
+-Join the token words into string back in the 'Tidy Tweets' column
+
+
+
+
+DATA VISUALISATION:
+ 
+>> Generate Wordcloud do for bothe positive and negative labels
+     -Join all the rows which are labeled positive into a variable 
+      from tidy tweets column
+      
+     -Create a wordcloud
+     Black Background:
+     http://clipart-library.com/image_gallery2/Twitter-PNG-Image.png
+     White Background:
+     https://static01.nyt.com/images/2014/08/10/magazine/10wmt/10wmt-jumbo-v4.jpg?quality=90&auto=webp
+     
+     
+>> Create list of positive and negative hashes(words) in the tweets
+   Plot top twenty frequency words in both in the form of bargraph
+   
+   
+   
+   
+FEATURE EXTRACTION:
+- Create bag of words dataframe
+- Create TF-IDF dataframe
+
+
+
+
+SPLITTING DATA INTO TRAIN AND TEST
+
+
+
+
+APPLYING MACHINE LEARNING MODELS
+-Logistic Regression : predict probability, f1 score, prediction >=0.3 -> negative
+-XGBClassifier
+-DecisionTreeClassifier
+
+
+
+MODEL COMPARISION
+-Form of a dataframe
+-Comparision graphs
+-Result generation in a .csv file
